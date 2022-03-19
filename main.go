@@ -1,19 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-type person struct {
-	name string
-	age int
-	favFood []string
-}
-
-// not exist at Go:
-// constructor()
-// __init__
+	"github.com/bnbong/accounts"
+)
 
 func main() {
-	favFood := []string{"kimchi", "ramen"}
-	nico := person{name:"nico", age: 18, favFood: favFood}
-	fmt.Println(nico.name)
+	account := accounts.NewAccount("nico")
+	fmt.Println(account)
+	// cannot do account.balance = 10000
+	// cannot do account.owner = "bnbong"
 }
