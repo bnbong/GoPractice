@@ -8,7 +8,6 @@ import (
 
 func main() {
 	account := accounts.NewAccount("nico")
-	fmt.Println(account)
-	// cannot do account.balance = 10000
-	// cannot do account.owner = "bnbong"
+	account.Deposit(10)
+	fmt.Println(account.Balance())
 }
