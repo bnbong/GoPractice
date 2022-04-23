@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/bnbong/accounts"
+	mydict "github.com/bnbong/dict"
 )
 
 func main() {
-	account := accounts.NewAccount("nico")
-	account.Deposit(10)
-	fmt.Println(account)
+	dictionary := mydict.Dictionary{"first": "First word"}
+	fmt.Println(dictionary["first"])
+	// fmt.Println(dictionary.Search("second"))
 }
